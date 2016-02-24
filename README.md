@@ -1,4 +1,4 @@
-# ro.kokos.storage
+# kokos.storage
 
 A Lucene simple storage. With rest server and CRUD capabilities.
 
