@@ -72,7 +72,10 @@
                               :page page 
                               :results-per-page 20)]
     (merge (meta results)
-           {:_hits (doall (map (fn [hit] (merge {:_score (get (meta hit) :_score 0)} hit)) results))})))
+           {:_hits (doall (map (fn [hit] 
+                                 (merge {:_score (get (meta hit) 
+                                                      :_score 0)} hit)) 
+                               results))})))
 
 
 
