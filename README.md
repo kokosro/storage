@@ -46,6 +46,22 @@ Using the client
 
 ```
 
+##Running locally, without a server?
+```clojure
+(ns running-local
+	(:require [kokos.storage.crud :as storage])
+(:gen-class))
+
+(def a-type (storage/storage-place ["index-name" "value-type"]))
+
+(a-type storage/upsert {:value "some-value" :_id "specific-id-or-no-id"})
+(a-type storage/search "_id:specific-id-or-no-id" 0)
+(a-type storage/get-by-id "specific-id-or-no-id")
+(a-type storage/delete "specific-id-or-no-id")
+
+```
+
+
 
 ## License
 
