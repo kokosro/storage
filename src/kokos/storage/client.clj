@@ -24,7 +24,7 @@
       false
       (edn/read-string response-body))))
 
-(defn update [type-path update-info id]
+(defn update [type-path id update-info]
   (let [response (http/post (str (first @*server-address*) "/" type-path "/" id)
                             {:form-params update-info
                              :basic-auth (second @*server-address*)})
