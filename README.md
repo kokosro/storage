@@ -73,4 +73,4 @@ go to  [lucene tutorial](http://www.lucenetutorial.com/lucene-query-syntax.html)
 
 ## License
 
-Distributed under the Eclipse Public License version 1.0 (found in epl-v10.txt).
+Distributed under the Eclipse Public License version 1.0 (found in LICENSE).
