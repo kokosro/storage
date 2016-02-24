@@ -4,7 +4,7 @@ A Lucene simple storage. With rest server and CRUD capabilities.
 
 ## Usage
 
-add this for lein project dependencies
+add this for lein project dependencies  
 [![Clojars Project](https://img.shields.io/clojars/v/org.clojars.kokos/storage.svg)](https://clojars.org/org.clojars.kokos/storage)
 
 
