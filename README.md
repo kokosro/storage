@@ -23,15 +23,12 @@ add this for lein project dependencies
 (:require [kokos.storage.client :as client])
 (:gen-class))
 
-;;with the started server we can use the client to CRUD it
-;;the second value of the server is the basic auth, 
-;;add nil or leave blank if you don't use one
-;;or add a ["user" "pass"] as the value
-(client/with-server ["http://localhost:12345"]
-	(client/create "index/type" {:value "a value"}))
+(client/set-server! ["http://localhost:12345"])
+
+(client/create "index/type" {:value "a value"})
+
 ;;this will return the created object - with _id and version
-(client/with-server ["http://localhost:12345"]
-	(client/update "index/type" {:value "a value"} "some-id"))
+(client/update "index/type" {:value "a value"} "some-id")
 
 ;;searching takes :query or :id. 
 ;;if not is supplied it's doing a general query
@@ -42,19 +39,19 @@ for more info on lucene query syntax
 go to  [lucene tutorial](http://www.lucenetutorial.com/lucene-query-syntax.html)
 
 ```clojure
-(client/with-server ["http://localhost:12345"]
-	(client/search "index/type" :query "a value"))
+(client/search "index/type" :query "a value")
+(client/search "index/type" :id "some-id")
+(client/search "index/type")
+```
+deleting is easy
 
-(client/with-server ["http://localhost:12345"]
-	(client/search "index/type" :id "some-id"))
-
-;;deleting is easy
-(client/with-server ["http://localhost:12345"]
-	(client/delete "index/type" "some-id"))
+```clojure
+(client/delete "index/type" "some-id")
 
 ```
 
 ###Running locally, without a server?
+#####beta
 ```clojure
 (ns running-local
 	(:require [kokos.storage.crud :as storage])
