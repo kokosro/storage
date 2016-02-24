@@ -25,10 +25,13 @@ add this for lein project dependencies
 
 (client/set-server! ["http://localhost:12345"])
 
-(client/create "index/type" {:value "a value"})
+(client/create "index/type" 
+	{:value "a value"})
 
 ;;this will return the created object - with _id and version
-(client/update "index/type" {:value "a value"} "some-id")
+(client/update "index/type" 
+	"some-id"
+	{:value "a value"} )
 
 ;;searching takes :query or :id. 
 ;;if not is supplied it's doing a general query
@@ -39,14 +42,18 @@ for more info on lucene query syntax
 go to  [lucene tutorial](http://www.lucenetutorial.com/lucene-query-syntax.html)
 
 ```clojure
-(client/search "index/type" :query "a value")
-(client/search "index/type" :id "some-id")
+(client/search "index/type" 
+	:query "a value")
+(client/search "index/type" 
+	:id "some-id")
 (client/search "index/type")
+
 ```
 deleting is easy
 
 ```clojure
-(client/delete "index/type" "some-id")
+(client/delete "index/type" 
+		"some-id")
 
 ```
 
