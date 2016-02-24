@@ -1,4 +1,4 @@
-# storage
+# ro.kokos.storage
 
 A Lucene simple storage. With rest server and CRUD capabilities.
 
@@ -54,7 +54,7 @@ go to  [lucene tutorial](http://www.lucenetutorial.com/lucene-query-syntax.html)
 
 ```
 
-##Running locally, without a server?
+###Running locally, without a server?
 ```clojure
 (ns running-local
 	(:require [kokos.storage.crud :as storage])
@@ -73,5 +73,4 @@ go to  [lucene tutorial](http://www.lucenetutorial.com/lucene-query-syntax.html)
 
 ## License
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License version 1.0 (found in epl-v10.txt).
