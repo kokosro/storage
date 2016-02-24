@@ -3,6 +3,11 @@
 A Lucene simple storage. With rest server and CRUD capabilities.
 
 ## Usage
+
+add this for lein project dependencies
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.kokos/storage.svg)](https://clojars.org/org.clojars.kokos/storage)
+
+
 ###Starting a server
 ```clojure
 (ns a-simple-storage-server
