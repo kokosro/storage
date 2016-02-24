@@ -3,7 +3,7 @@
 A Lucene simple storage. With rest server and CRUD capabilities.
 
 ## Usage
-Starting a server
+###Starting a server
 ```clojure
 (ns a-simple-storage-server
 (:require [kokos.storage.server :as server])
@@ -12,7 +12,7 @@ Starting a server
 ;;server address will be http://localhost:12345
 (server/re-start 12345)
 ```
-Using the client
+###Using the client
 ```clojure
 (ns a-simple-storage-client
 (:require [kokos.storage.client :as client])
