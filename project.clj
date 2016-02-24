@@ -1,4 +1,4 @@
-(defproject org.clojars.kokos/storage "0.1.0"
+(defproject org.clojars.kokos/storage "0.1.1"
   :description "Lucene simple storage. With rest server and CRUD capabilities."
   :url "https://github.com/kokosro/storage"
   :license {:name "Eclipse Public License"
@@ -16,5 +16,7 @@
   :main ^:skip-aot kokos.storage.server
   :uberjar-merge-with {#"org\.apache\.lucene\.codecs\.*" [slurp str spit]}
   :target-path "target/%s"
-  
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:1.6  {:dependencies [[org.clojure/clojure "1.6.0"]]}
+             :1.7  {:dependencies [[org.clojure/clojure "1.7.0"]]}
+             :1.8  {:dependencies [[org.clojure/clojure "1.8.0"]]}
+             :uberjar {:aot :all}})
