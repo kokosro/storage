@@ -31,9 +31,12 @@ A Lucene simple storage. With rest server and CRUD capabilities.
 ;;searching takes :query or :id. 
 ;;if not is supplied it's doing a general query
 ;;*:*
-;; for more info on lucene query syntax
-;; go to  [lucene tutorial](http://www.lucenetutorial.com/lucene-query-syntax.html)
+```
 
+for more info on lucene query syntax
+go to  [lucene tutorial](http://www.lucenetutorial.com/lucene-query-syntax.html)
+
+```clojure
 (client/with-server ["http://localhost:12345"]
 	(client/search "index/type" :query "a value"))
 
