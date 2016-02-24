@@ -1,6 +1,6 @@
 (defproject org.clojars.kokos/storage "0.1.0"
   :description "Lucene simple storage. With rest server and CRUD capabilities."
-  :url "http://example.com/FIXME"
+  :url "https://github.com/kokosro/storage"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :deploy-repositories [["clojars" {:url "https://clojars.org/repo/"
