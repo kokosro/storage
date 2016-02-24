@@ -1,4 +1,4 @@
-(defproject org.clojars.kokos/storage "0.1.1"
+(defproject org.clojars.kokos/storage "0.1.2"
   :description "Lucene simple storage. With rest server and CRUD capabilities."
   :url "https://github.com/kokosro/storage"
   :license {:name "Eclipse Public License"
